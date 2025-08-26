@@ -26,6 +26,7 @@
 ## 4. Edição dos Componentes
 - Implementação do layout e estilos em cada componente:
   - `menu-superior.html`: estrutura do menu de navegação baseado em bootstrap
+  - `noticia.html`: adicionado os cards com imagens
 
 ## 5. Configuração de Rotas
 - O projeto foi criado com suporte a rotas (`--routing`), mas nenhuma rota foi configurada ou editada nesta aula.
