@@ -11,6 +11,11 @@ import { ListarCliente } from './listar-cliente/listar-cliente';
 import { Home } from './home/home';
 import { Calculadora } from './calculadora/calculadora';
 import { PaginaNaoEncontrada } from './pagina-nao-encontrada/pagina-nao-encontrada';
+import { NoticiaDetalhe } from './noticia-detalhe/noticia-detalhe';
+import { TelaPai } from './tela-pai/tela-pai';
+import { TelaFilho1 } from './tela-filho1/tela-filho1';
+import { TelaFilho2 } from './tela-filho2/tela-filho2';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,13 +26,18 @@ import { PaginaNaoEncontrada } from './pagina-nao-encontrada/pagina-nao-encontra
     ListarCliente,
     Home,
     Calculadora,
-    PaginaNaoEncontrada
+    PaginaNaoEncontrada,
+    NoticiaDetalhe,
+    TelaPai,
+    TelaFilho1,
+    TelaFilho2
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
