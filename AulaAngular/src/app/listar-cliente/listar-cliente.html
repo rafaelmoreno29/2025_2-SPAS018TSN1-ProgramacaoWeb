@@ -9,35 +9,46 @@
 </div>
 <div class="row">
     <div class="col">
+        <input id="mostrar" type="checkbox" [(ngModel)]="mostraTabela">
+        <label for="mostrar">Mostrar Tabela</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        @if(mostraTabela){
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
+                @for (c of clientes; track $index) {
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row">{{c.id}}</th>
+                    <td>{{c.nome}}</td>
+                    <td>{{c.cidade}}</td>
+                    <td>
+                        @switch (c.cidade) {
+                        @case ('São Paulo') {
+                        <span class="badge bg-success">Ativo</span>
+                        }
+                        @case ('Rio de Janeiro') {
+                        <span class="badge bg-warning text-dark">Inativo</span>
+                        }
+                        @default {
+                        <span class="badge bg-secondary">Indefinido</span>
+                        }
+                        }
+                    </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                }
             </tbody>
         </table>
+        }
     </div>
 </div>
 

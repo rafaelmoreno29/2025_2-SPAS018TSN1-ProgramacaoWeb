@@ -16,6 +16,7 @@ import { TelaPai } from './tela-pai/tela-pai';
 import { TelaFilho1 } from './tela-filho1/tela-filho1';
 import { TelaFilho2 } from './tela-filho2/tela-filho2';
 import { FormsModule } from '@angular/forms';
+import { CalcularMedia } from './calcular-media/calcular-media';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     NoticiaDetalhe,
     TelaPai,
     TelaFilho1,
-    TelaFilho2
+    TelaFilho2,
+    CalcularMedia
   ],
   imports: [
     BrowserModule,
