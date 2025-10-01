@@ -9,7 +9,8 @@ import { Cliente } from '../models/cliente';
   styleUrl: './listar-cliente.css'
 })
 export class ListarCliente {
-
+  clienteSelecionado: Cliente | null = null;
+  nome: string = '';
   mostraTabela: boolean = true;
   clientes: Cliente[] = [
     { id: 1, nome: 'Ana', cidade: 'São Paulo' },
